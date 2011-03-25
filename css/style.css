@@ -90,4 +90,99 @@ margin: 0;
 margin: 0 80px;
 zoom: 1; /* Needed to avoid IE's float margin bugs */
 }
+/*FORM and DIV part*/
+#form_selector_container{
+	width: 96%;
+	margin-left:2%;
+	margin-right:2%;
+	height: 140px;
+	background-color:#00FF00;
+	display: block;
+}
 
+
+
+#api_selector{
+	width: 15%;
+	height: 100%;
+	background-color:#CCCCCC;
+	display:table-cell;
+	
+}
+
+#version_selector{
+	width: 15%;
+	height: 100%;
+	background-color:#F00000;
+	display:table-cell;
+	
+}
+
+#funcion_selector{
+	width: 20%;
+	height: 100%;
+	background-color:#FFF000;
+	display:table-cell;
+	
+}
+
+#form_container{
+	width: 48%;
+	height: 100%;
+	background-color:#FFFFF0;
+	display:table-cell;
+	
+}
+
+#selector_table{
+	width:160px;
+	height:150px;
+	background-color:#FFFFF0;
+	display:block;
+}
+#selector_header
+{
+	background-color:#EEEEEE;
+}
+#selector_title
+{
+	font-family:sans-serif;
+	font-size:20px;
+	margin-left:5px;
+	margin-top:0px;
+	margin-bottom:2px;
+	
+}
+#selector_content
+{
+	height:120px;
+	overflow:auto;
+	
+}
+#selector_row
+{
+	
+	background-color:#CCCCCC;
+}
+#selector_value.on
+{
+	background-color:#00ff00;
+}
+#selector_value
+{
+	cursor:pointer;
+	font-family:sans-serif;
+	font-size:16px;
+	margin-left:5px;
+	padding:10px;
+	padding-left:1px;
+	margin:0px;
+	margin-top:0px;
+	border-top-style:solid;
+	border-top-width:1px;
+	border-top-color:#111111;
+	
+}
+
+
+}
