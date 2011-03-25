@@ -62,7 +62,23 @@ display: block;
     zoom: 1;
 }
 
+#disclaimer {
+    width: 91%;
+    text-align: justify;
+    color: #999;
+    font-size: 70%;
+}
 
+#authors {
+    text-align: center;
+    color: #999;
+    font-size: 70%;
+}
+
+#flossome {
+    padding-top: 15px;
+    margin-top: 15px;
+}
 
 /* One column */
 .cols-one #body-main-left,
