@@ -1,0 +1,77 @@
+body {
+	text-align: center;
+	background: #005A7F url(/bluevia/images/bg.jpg) no-repeat top left;
+}
+
+#header,
+#body,
+#footer {
+    width: 974px;
+    padding-left: 6px;
+    padding-right: 80px;
+
+    margin: 0 auto;
+    text-align: left;
+}
+
+#header {
+    height: 164px;
+    /* make room for the body background top border */
+    padding-bottom: 8px;
+    background: url(/bluevia/images/bg-header.png) no-repeat;
+    background-position: -4px bottom;
+}
+#body {
+    min-height: 300px;
+    background: url(/bluevia/images/bg-body.png) repeat-y -4px 0;
+}
+
+#header-top {
+    float: left;
+    height: 74px; /* 110px - 36px = 74px */
+    padding-top: 36px;
+}
+
+#header-top a {        
+margin: 0; padding: 0;
+width: 200px;
+height: 100px;
+background: url(/bluevia/images/logo-beta.png) no-repeat;
+background-position: left top;
+text-indent: -3000px;
+display: block;
+}
+
+#footer {
+    background: url(/bluevia/images/bg-footer.png) no-repeat -4px 0;
+
+    /* 974px width + 80px padding right */
+    width: 1054px;
+    padding-right: 0;
+
+    /*
+        A gap of 90px is defined in the style guide but we are enlarging it
+        to 100px to ease the implementation (squared bottom right corner).
+        So the padding includes the 100px white space plus a 20px gap.
+    */
+    padding-top: 120px;
+    padding-bottom: 60px;
+
+    /* Ensure all floats are contained */
+    overflow: hidden;
+    zoom: 1;
+}
+
+
+
+/* One column */
+.cols-one #body-main-left,
+.cols-one #body-main-right {
+display: none;
+margin: 0;
+}
+.cols-one #body-main-content {
+margin: 0 80px;
+zoom: 1; /* Needed to avoid IE's float margin bugs */
+}
+

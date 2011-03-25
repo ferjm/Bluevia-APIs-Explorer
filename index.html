@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bluevia API Explorer - Flossome</title>
+<script language="JavaScript" type="text/javascript" src="js/jquery-1.5.1.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div id="header">
+    <div id="header-top">
+        <a href="#" title="BlueVia">BLUEVIA APIs Explorer</a>        
+    </div>    
+</div>
+<div id="body" class "cols-one-home">
+    <div id="body-main">
+        <div id="body-main-left"></div>
+
+        <div id="body-main-right"></div>
+            <center><img border="0" src="images/under_construction.jpg"/></center>
+        <div id="body-main-content">
+           <code><div id="result_div"></div></code>
+
+        </div> 
+
+    </div> 
+</div> 
+
+<div id="footer"></div>
+
+<script type="text/javascript">
+    $('#sms_form').submit(function(event) {
+        event.preventDefault();
+        var url =$(this).attr('action');
+        var datos = $(this).serialize();
+        $.get(url,datos,function(result) {
+            $('#result_div').html(result);
+        });
+    });
+</script>
+
+</body>
+</html>

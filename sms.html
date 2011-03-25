@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bluevia API Explorer - SMS Test - Flossome</title>
+<script language="JavaScript" type="text/javascript" src="js/jquery-1.5.1.js"></script>
+</head>
+<body>
+
+<div id="sms_div">
+	<form id="sms_form" name="sms_form" action="clients/send_sms.php">
+		Address<input type="text" name="sms_address"/> <br>
+		Message<input type="text" name="sms_message"/> <br>
+		<input type="submit" name="sms_send" value="Send"/>
+	</form>
+</div>
+
+<p id="result_div"></p>
+
+<script type="text/javascript">
+    $('#sms_form').submit(function(event) {
+        event.preventDefault();
+        var url =$(this).attr('action');
+        var datos = $(this).serialize();
+        $.get(url,datos,function(result) {
+            $('#result_div').html(result);
+        });
+    });
+</script>
+
+</body>
+</html>
