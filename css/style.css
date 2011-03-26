@@ -127,12 +127,19 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 }
 
 #form_container{
-	width: 48%;
-	height: 100%;
+	height:150px;
+	
 	background-color:#FFFFF0;
 	display:table-cell;
 	
+	
 }
+#form_content
+{
+	
+	
+}
+
 
 #selector_table{
 	width:160px;
@@ -153,21 +160,20 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 	margin-bottom:2px;
 	
 }
-#selector_content
+.selector_content
 {
 	height:120px;
 	overflow:auto;
 	
 }
+
+
 #selector_row
 {
 	
 	background-color:#CCCCCC;
 }
-#selector_value.on
-{
-	background-color:#00ff00;
-}
+
 #selector_value
 {
 	cursor:pointer;
@@ -184,5 +190,14 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 	
 }
 
+#result_div
+{
+	margin-left:20px;
+	margin-top:10px;
+	width:96%;
+	height:400px;
+	background-color:#00ffff;
+	
+}
 
 }

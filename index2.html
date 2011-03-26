@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bluevia API Explorer - Flossome</title>
+<script language="JavaScript" type="text/javascript" src="js/jquery-1.5.1.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/index.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div id="header">
+    <div id="header-top">
+        <a href="#" title="BlueVia">BLUEVIA APIs Explorer</a>        
+    </div>    
+</div>
+<div id="body" class "cols-one-home">
+    <div id="body-main">
+         <div id="form_selector_container">
+                        <div id="api_selector">
+                                <div id="selector_table">
+                                        <div id="selector_header">
+                                                <p id="selector_title">API list</p>
+                                        </div>
+                                        <div class="selector_content" id="API_content">
+                                        </div>
+                                </div>
+
+                        </div>
+                        <div id="version_selector">
+                        	<div id="selector_table">
+                                        <div id="selector_header">
+                                                <p id="selector_title">API Version</p>
+                                        </div>
+                                        <div class="selector_content" id="API_version">
+                                        </div>
+                                </div>
+                        </div>
+                        <div id="funcion_selector">
+                        	<div id="selector_table">
+                                        <div id="selector_header">
+                                                <p id="selector_title">API Functions</p>
+                                        </div>
+                                        <div class="selector_content" id="API_functions">
+                                        </div>
+                                </div>
+                        </div>
+                        <div id="form_container">
+                        	<form id="function_form" class="selector_content" name="input" action="" method="">
+                        		    <br />
+                        	</form>
+                        </div>
+          </div>
+
+        <div id="body-main-left"></div>
+
+        <div id="body-main-right"></div>
+        
+        <div id="body-main-content">
+           <code><div id="result_div"></div></code>
+
+        </div> 
+
+    </div> 
+</div> 
+
+<div id="footer"></div>
+
+<script type="text/javascript">
+    $('#sms_form').submit(function(event) {
+        event.preventDefault();
+        var url =$(this).attr('action');
+        var datos = $(this).serialize();
+        $.get(url,datos,function(result) {
+            $('#result_div').html(result);
+        });
+    });
+</script>
+
+</body>
+</html>
