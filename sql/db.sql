@@ -10,12 +10,6 @@ CREATE TABLE IF NOT EXISTS `method` (
   PRIMARY KEY  (`method_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Dumping data for table `method`
---
-
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `parameters`
@@ -31,12 +25,6 @@ CREATE TABLE IF NOT EXISTS `parameters` (
   PRIMARY KEY  (`param_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
---
--- Dumping data for table `parameters`
---
-
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `service`
