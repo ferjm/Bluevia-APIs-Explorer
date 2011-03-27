@@ -200,13 +200,7 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 	
 }
 
-#description_div
-{
-	width:100%;
-	height:auto;
-	background-color:#ff00ff;
-	
-}
+
 
 #blank
 {
@@ -217,9 +211,39 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 { 
 	margin-right:19px;
 	float:right;
-	width:200px;
+	width:260px;
 	height:auto;
 	background-color:#00f0f0;
+	
+}
+
+.input_token
+{
+	width:100px;
+}
+
+.accordeon_button
+{
+	cursor:pointer;
+}
+.accordeon_content
+{
+	cursor:pointer;
+}
+
+.on {
+    background-color: #990000;
+    }
+    
+.over {
+    background-color: #CCCCCC;
+    }
+
+#description_div
+{
+	width:100%;
+	height:auto;
+	background-color:#ff00ff;
 	
 }
 

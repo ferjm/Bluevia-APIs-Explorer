@@ -5,6 +5,7 @@
 <title>Bluevia API Explorer - Flossome</title>
 <script language="JavaScript" type="text/javascript" src="js/jquery-1.5.1.js"></script>
 <script language="JavaScript" type="text/javascript" src="js/index.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/jquery_accordion.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -17,7 +18,14 @@
 <div id="body" class "cols-one-home">
 	 
     <div id="body-main">
-    	<div id="authentication_div"><br /></div>
+    	<div id="authentication_div">
+		<div class="accordeon_button">Authentication state (not authenticated)</div>
+						<div class="accordeon_content">
+							<input type="text" class="input_token"><input type="button" value="send token 1"/><br />
+							<input type="text" class="input_token"><input type="button" value="send token 2"/><br />
+							<input type="text" class="input_token"><input type="button" value="send token 3"/><br />
+						</div>
+		</div>
 		<div id="blank"></div>
          <div id="form_selector_container">
                         <div id="api_selector">
@@ -54,7 +62,11 @@
                         	</form>
                         </div>
 				<div id="description_div">
-					<br />
+						<div class="accordeon_button">Function Documentation</div>
+						<div class="accordeon_content">
+							<br /><br /><br />
+							One ball, two players. Lots of fun.
+						</div>
 				</div>		
           </div>
 
