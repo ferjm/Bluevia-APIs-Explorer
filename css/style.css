@@ -95,7 +95,7 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 	width: 96%;
 	margin-left:2%;
 	margin-right:2%;
-	height: 140px;
+	height: auto;
 	background-color:#00FF00;
 	display: block;
 }
@@ -193,11 +193,35 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 #result_div
 {
 	margin-left:20px;
-	margin-top:10px;
+	margin-top:0px;
 	width:96%;
 	height:400px;
 	background-color:#00ffff;
 	
 }
+
+#description_div
+{
+	width:100%;
+	height:auto;
+	background-color:#ff00ff;
+	
+}
+
+#blank
+{
+	display:block;
+	clear:both;
+}
+#authentication_div
+{ 
+	margin-right:19px;
+	float:right;
+	width:200px;
+	height:auto;
+	background-color:#00f0f0;
+	
+}
+
 
 }
