@@ -231,6 +231,9 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 	cursor:pointer;
 }
 
+
+
+
 .on {
     background-color: #990000;
     }
@@ -238,6 +241,10 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 .over {
     background-color: #CCCCCC;
     }
+
+.over_list {
+	background-color:#CACACA;
+}
 
 #description_div
 {
