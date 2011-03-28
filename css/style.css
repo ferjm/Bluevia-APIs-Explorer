@@ -95,7 +95,7 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 	width: 96%;
 	margin-left:2%;
 	margin-right:2%;
-	height: 140px;
+	height: auto;
 	background-color:#00FF00;
 	display: block;
 }
@@ -127,12 +127,19 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 }
 
 #form_container{
-	width: 48%;
-	height: 100%;
+	height:150px;
+	
 	background-color:#FFFFF0;
 	display:table-cell;
 	
+	
 }
+#form_content
+{
+	
+	
+}
+
 
 #selector_table{
 	width:160px;
@@ -153,21 +160,20 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 	margin-bottom:2px;
 	
 }
-#selector_content
+.selector_content
 {
 	height:120px;
 	overflow:auto;
 	
 }
+
+
 #selector_row
 {
 	
 	background-color:#CCCCCC;
 }
-#selector_value.on
-{
-	background-color:#00ff00;
-}
+
 #selector_value
 {
 	cursor:pointer;
@@ -181,6 +187,70 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 	border-top-style:solid;
 	border-top-width:1px;
 	border-top-color:#111111;
+	
+}
+
+#result_div
+{
+	margin-left:20px;
+	margin-top:0px;
+	width:96%;
+	height:400px;
+	background-color:#00ffff;
+	
+}
+
+
+
+#blank
+{
+	display:block;
+	clear:both;
+}
+#authentication_div
+{ 
+	margin-right:19px;
+	float:right;
+	width:260px;
+	height:auto;
+	background-color:#00f0f0;
+	
+}
+
+.input_token
+{
+	width:100px;
+}
+
+.accordeon_button
+{
+	cursor:pointer;
+}
+.accordeon_content
+{
+	cursor:pointer;
+}
+
+
+
+
+.on {
+    background-color: #990000;
+    }
+    
+.over {
+    background-color: #CCCCCC;
+    }
+
+.over_list {
+	background-color:#CACACA;
+}
+
+#description_div
+{
+	width:100%;
+	height:auto;
+	background-color:#ff00ff;
 	
 }
 
