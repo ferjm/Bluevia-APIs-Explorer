@@ -1,11 +1,7 @@
 <?php
-
-class db {
-    static public function connect() {
-        $link=mysql_connect('slge585.piensasolutions.com','','') or die('Database connection error');
-        mysql_select_db('qht253',$link) or die('Database selection error');
-        return $link;
-    }
-}
-
+include_once('db.class.php');
+$contents = file_get_contents("../sql/db.nfo");
+list($user, $pass) = explode(',',$contents);
+$db = new db_class();
+$db_link = $db->connect('slge585.piensasolutions.com',$user,$pass,'qht253');
 ?>
