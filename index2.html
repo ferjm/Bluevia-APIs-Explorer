@@ -18,8 +18,8 @@
 <div id="body" class "cols-one-home">
 	 
     <div id="body-main">
-    	<div id="authentication_div">
-		<div class="accordeon_button">Authentication state (not authenticated)</div>
+    	<div id="authentication_div" class="">
+		<div class="accordeon_button top_right top_left">Authentication state (not authenticated)</div>
 						<div class="accordeon_content">
 							<input type="text" class="input_token"><input type="button" value="send token 1" onclick="click_token1();"/><br />
 							<input type="text" class="input_token"><input type="button" value="send token 2"  onclick="click_token2();"/><br />
@@ -30,10 +30,10 @@
          <div id="form_selector_container">
                         <div id="api_selector">
                                 <div id="selector_table">
-                                        <div id="selector_header">
+                                        <div id="selector_header" class="first_selector">
                                                 <p id="selector_title">API list</p>
                                         </div>
-                                        <div class="selector_content" id="API_content">
+                                        <div class="selector_content first_container" id="API_content">
                                         </div>
                                 </div>
 
@@ -57,12 +57,17 @@
                                 </div>
                         </div>
                         <div id="form_container">
-                        	<form id="function_form" class="selector_content" name="input" action="" method="">
-                        		    <br />
-                        	</form>
+                        	<div id="selector_header" class="">
+                                                <p id="selector_title" class="">Form function</p>
+                                        </div>
+							<div class="selector_content ">			
+	                        	<form id="function_form"  name="input" action="" method="">
+	                        		    <br />
+	                        	</form>
+							</div>
                         </div>
-				<div id="description_div">
-						<div class="accordeon_button">Function Documentation</div>
+				<div id="description_div" >
+						<div class="accordeon_button first_selector">Function Documentation</div>
 						<div class="accordeon_content">
 							<br /><br /><br />
 							One ball, two players. Lots of fun.
