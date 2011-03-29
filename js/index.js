@@ -39,25 +39,10 @@
 }
  
  	function loadApiList() {
-		var div_api_selector=document.getElementById("API_content");
-//TODO fake data! get from db!
-		data = new Array("API one","API two","API three","API four");
-		mHTML = "";
-		var myclass="";
-		for(i=0; i<data.length; i++) {
-			if (i%2==1)
-			{
-				myclass="selector_alt";
-			}else
-			{
-				myclass="";
-			}
-			mHTML += "<div id=\"selector_row\"  onclick=\"loadApiVersions('"+data[i]+"');\" >"
-	                 +"<p id=\"selector_value\" class=\"selector_border "+myclass+"\">"+data[i]+"</p>"
-	                 +"</div>"
-		}
-		mHTML+="";
-		div_api_selector.innerHTML = mHTML;
+		$url='selector/get_services.php';
+		$.get($url,function(result) {
+            $('#API_content').html(result);
+        });
 	}
 	
 	function loadApiVersions(p_api) {
@@ -86,25 +71,9 @@
 	}	
 	
 	 function loadApiFunctions(p_version) {
-		actualVersion=p_version;
-		var div_api_selector=document.getElementById("API_functions");
-//TODO fake data! get from db!
-		data = new Array("["+p_version+"]function1","["+p_version+"]function2","["+p_version+"]function3","["+p_version+"]function4","["+p_version+"]function5","["+p_version+"]function6");
-		mHTML = "";
-		for(i=0; i<data.length; i++) {
-			if (i%2==1)
-			{
-				myclass="selector_alt";
-			}else
-			{
-				myclass="";
-			}
-			mHTML += "<div id=\"selector_row\" onclick=\"loadFormForFunction('"+data[i]+"');\" >"
-	                 +"<p id=\"selector_value\" class=\"selector_border "+myclass+"\">"+data[i]+"</p>"
-	                 +"</div>"
-		}
-		mHTML+="";
-		div_api_selector.innerHTML = mHTML;
+        $.get('selector/get_methods.php','service_id='+p_version,function(result) {
+            $('#API_functions').html(result);
+        });
 	}		
 
 
