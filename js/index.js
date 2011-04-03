@@ -3,7 +3,14 @@
 
  	 loadApiList();
 	 initListElements();
-  
+  /*    $('#sms_form').submit(function(event) {
+        event.preventDefault();
+        var url =$(this).attr('action');
+        var datos = $(this).serialize();
+        $.get(url,datos,function(result) {
+            $('#result_div').html(result);
+        });
+    });*/
  });
  
  
@@ -20,6 +27,10 @@
         $(this).removeClass('over_list');                                        
     });
  }
+ 
+ function executeForm() {
+	alert("execute query!");
+}
  
  function initAccordeons() {
 	  $('.accordeon_button').click(function() {
@@ -64,7 +75,7 @@
 			}
 			mHTML += "<div id=\"selector_row\" onclick=\"loadApiFunctions('"+data[i]+"');\" >"
 	                 +"<p id=\"selector_value\" class=\"selector_border "+myclass+"\">"+data[i]+"</p>"
-	                 +"</div>"
+	                 +"</div>";
 		}
 		mHTML+="";
 		div_api_selector.innerHTML = mHTML;
@@ -93,8 +104,7 @@
 		div_api_selector.innerHTML = mHTML;*/
         $.get('selector/get_parameters.php','method_id='+p_function,function(result) {
             $('#function_form').html(result);
-        });
-		
+        });		
 	}
 
 //this function will draw the test output

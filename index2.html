@@ -61,9 +61,9 @@
                                                 <p id="selector_title" class="">Form function</p>
                                         </div>
 							<div class="selector_content ">			
-	                        	<form id="function_form"  name="input" action="" method="">
+	                        	<div id="function_form">
 	                        		    <br />
-	                        	</form>
+	                        	</div>
 							</div>
                         </div>
 				<div id="description_div" >
@@ -80,7 +80,7 @@
         <div id="body-main-right"></div>
        
         <div id="body-main-content">
-           <code><div id="result_div"></div></code>
+           <div id="result_div"></div>
 
         </div> 
 
@@ -90,15 +90,14 @@
 <div id="footer"></div>
 
 <script type="text/javascript">
-    $('#sms_form').submit(function(event) {
+    $('#API_form').submit(function(event) {
         event.preventDefault();
-        var url =$(this).attr('action');
+        var url = $(this).attr('action');
         var datos = $(this).serialize();
         $.get(url,datos,function(result) {
             $('#result_div').html(result);
         });
     });
 </script>
-
 </body>
 </html>

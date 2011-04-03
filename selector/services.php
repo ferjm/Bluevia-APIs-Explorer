@@ -50,5 +50,16 @@
             }
             return false;
         }
+        
+        function getMethodAction($method_id) {
+        	if($this->db) {                
+                if($result = $this->db->select("select method_action from method where method_id=$method_id"))
+                    return $result;
+                else
+                    $this->db->print_last_error();
+            }
+            return false;
+        }
+        
     }
 ?>
