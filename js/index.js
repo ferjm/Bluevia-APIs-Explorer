@@ -3,7 +3,14 @@
 
  	 loadApiList();
 	 initListElements();
-  
+  /*    $('#sms_form').submit(function(event) {
+        event.preventDefault();
+        var url =$(this).attr('action');
+        var datos = $(this).serialize();
+        $.get(url,datos,function(result) {
+            $('#result_div').html(result);
+        });
+    });*/
  });
  
  
@@ -20,6 +27,10 @@
         $(this).removeClass('over_list');                                        
     });
  }
+ 
+ function executeForm() {
+	alert("execute query!");
+}
  
  function initAccordeons() {
 	  $('.accordeon_button').click(function() {
@@ -89,7 +100,7 @@
 		for(i=0; i<data.length; i++) {
 			mHTML +="<span id=\"selector_value\">"+ data[i]+"</span> :  <input type=\"text\" name=\""+data[i]+"\" /><br />"
 		}
-		mHTML+="<br /></div><div class=\"btn_submit\"><input  type=\"submit\" value=\"Submit\" /></div>";
+		mHTML+="<br /></div><div class=\"btn_submit\"><input  type=\"button\" value=\"Submit\" onclick=\"executeForm();\" /></div>";
 		div_api_selector.innerHTML = mHTML;
 		
 	}
