@@ -4,7 +4,7 @@ include_once 'constants.php';
 $application_context = array(
     'user' => array(
         'token_access' => TOKEN,
-        'token_secret' => TOKEN_SECRET,
+        'token_secret' => TOKEN_SECRET
     ),
     'app' => array(
         'consumer_key' => CONSUMER_KEY,
@@ -15,8 +15,8 @@ $application_context = array(
 $unica = new Unica($application_context);
 $sms = $unica->getApiSms();
 
-$number = $_GET['sms_address']; 
-$sms_message = $_GET['sms_message'];
+$number ="212345";//$_GET['sms_address']; 
+$sms_message = "SANDdroid dsa";//$_GET['sms_message'];
 $sms->setRecipient($number)
     ->setMessage(SMS_SPECIAL_KEYWORD . $sms_message);
 

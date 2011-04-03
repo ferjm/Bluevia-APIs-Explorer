@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bluevia API Explorer - Request Token Test - Flossome</title>
+<script language="JavaScript" type="text/javascript" src="js/jquery-1.5.1.js"></script>
+</head>
+<body>
+
+<div id="request_token_div">
+	<form id="request_form" name="request_form" action="clients/request_token.php">
+		Consumer Key<input type="text" name="consumer_key"/> <br>
+		Consumer Secret<input type="text" name="consumer_secret"/> <br>
+		<input type="submit" name="request_send" value="Send"/>
+	</form>
+</div>
+
+<p id="result_div"></p>
+
+<script type="text/javascript">
+    $('#request_form').submit(function(event) {
+        event.preventDefault();
+        var url =$(this).attr('action');
+        var datos = $(this).serialize();
+        $.get(url,datos,function(result) {
+            $('#result_div').html(result);
+        });
+    });
+</script>
+
+</body>

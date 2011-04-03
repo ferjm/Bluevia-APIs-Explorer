@@ -81,7 +81,7 @@
 	//load all functions from de params
 	function loadFormForFunction(p_function)
 	{
-		actualFunction=p_function;
+/*		actualFunction=p_function;
 		var div_api_selector=document.getElementById("function_form");
 		mHTML = "<div class=\"selector_content selection_form\" ><p id='selector_title'>"+p_function+"</p><br />"
 		//TODO fake data! get from db!		
@@ -90,7 +90,10 @@
 			mHTML +="<span id=\"selector_value\">"+ data[i]+"</span> :  <input type=\"text\" name=\""+data[i]+"\" /><br />"
 		}
 		mHTML+="<br /></div><div class=\"btn_submit\"><input  type=\"submit\" value=\"Submit\" /></div>";
-		div_api_selector.innerHTML = mHTML;
+		div_api_selector.innerHTML = mHTML;*/
+        $.get('selector/get_parameters.php','method_id='+p_function,function(result) {
+            $('#function_form').html(result);
+        });
 		
 	}
 
