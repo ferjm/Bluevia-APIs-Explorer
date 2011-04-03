@@ -315,12 +315,9 @@ zoom: 1; /* Needed to avoid IE's float margin bugs */
 }
 
 .on {
-    background-color: #7777ff;
+    background-color: #CACACA;
     }
-    
-.over {
-    background-color: #0000ff;
-    }
+
 
 .over_list {
 	background-color:#CACACA;
