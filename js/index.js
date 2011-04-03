@@ -2,15 +2,7 @@
      initAccordeons();
 
  	 loadApiList();
-	 initListElements();
-  /*    $('#sms_form').submit(function(event) {
-        event.preventDefault();
-        var url =$(this).attr('action');
-        var datos = $(this).serialize();
-        $.get(url,datos,function(result) {
-            $('#result_div').html(result);
-        });
-    });*/
+	 initListElements();		      
  });
  
  
@@ -19,7 +11,7 @@
  var actualApi;
  var actualVersion;
  var actualFunction;
- 
+  var loadingHtml='<p align="center"><img src="images/loading.gif" width="36px" height="36px" /></p>';
  function initListElements(){
  	 $('.accordeon_button').mouseover(function() {
         $(this).addClass('over_list');
@@ -51,6 +43,7 @@
  
  	function loadApiList() {
 		$url='selector/get_services.php';
+		$('#API_content').html(loadingHtml);
 		$.get($url,function(result) {
             $('#API_content').html(result);
         });
@@ -62,6 +55,7 @@
 		document.getElementById("function_form").innerHTML="<br />";
 		document.getElementById("API_functions").innerHTML = "";
 		var div_api_selector=document.getElementById("API_version");
+		
 	//TODO fake data! get from db!
 		data = new Array("V1["+p_api+"]","V2["+p_api+"]","V3["+p_api+"]","V4["+p_api+"]");
 		mHTML = "";
@@ -75,13 +69,14 @@
 			}
 			mHTML += "<div id=\"selector_row\" onclick=\"loadApiFunctions('"+data[i]+"');\" >"
 	                 +"<p id=\"selector_value\" class=\"selector_border "+myclass+"\">"+data[i]+"</p>"
-	                 +"</div>"
+	                 +"</div>";
 		}
 		mHTML+="";
 		div_api_selector.innerHTML = mHTML;
 	}	
 	
 	 function loadApiFunctions(p_version) {
+	 	$('#API_functions').html(loadingHtml);
         $.get('selector/get_methods.php','service_id='+p_version,function(result) {
             $('#API_functions').html(result);
         });
@@ -92,7 +87,7 @@
 	//load all functions from de params
 	function loadFormForFunction(p_function)
 	{
-		actualFunction=p_function;
+/*		actualFunction=p_function;
 		var div_api_selector=document.getElementById("function_form");
 		mHTML = "<div class=\"selector_content selection_form\" ><p id='selector_title'>"+p_function+"</p><br />"
 		//TODO fake data! get from db!		
@@ -100,9 +95,12 @@
 		for(i=0; i<data.length; i++) {
 			mHTML +="<span id=\"selector_value\">"+ data[i]+"</span> :  <input type=\"text\" name=\""+data[i]+"\" /><br />"
 		}
-		mHTML+="<br /></div><div class=\"btn_submit\"><input  type=\"button\" value=\"Submit\" onclick=\"executeForm();\" /></div>";
-		div_api_selector.innerHTML = mHTML;
-		
+		mHTML+="<br /></div><div class=\"btn_submit\"><input  type=\"submit\" value=\"Submit\" /></div>";
+		div_api_selector.innerHTML = mHTML;*/
+			$('#function_form').html(loadingHtml);
+        $.get('selector/get_parameters.php','method_id='+p_function,function(result) {
+            $('#function_form').html(result);
+        });		
 	}
 
 //this function will draw the test output
@@ -116,4 +114,13 @@
 	function click_token2(){}
 	function click_token3(){}	
 	
-	
+	function sendForm(uri) {		
+		$('#apiForm').submit(function(event) {
+	        event.preventDefault();
+	        var url = uri;
+	        var datos = $(this).serialize();
+	        $.get(url,datos,function(result) {
+	            $('#result_div').html(result);
+	        });
+	    });		
+}
