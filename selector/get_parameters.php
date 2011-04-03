@@ -9,10 +9,10 @@ if($services) {
 }    
 
 echo "<div class=\"selector_content selection_form\" ><p id='selector_title'>".$method_id."</p><br />"; //TODO: add long name field to db
-echo "<form id=\"apiForm\" name=\"API_form\" method=\"post\" action=\"".$method_action->method_action."\">";
+echo "<form id=\"apiForm\" name=\"API_form\" method=\"post\" action=\"\" >";
 while($param = @mysql_fetch_object($params)) 
     echo "<span id=\"selector_value\">".$param->param_name."</span> :  <input type=\"".$param->param_html_component."\" name=\"".$param->param_name."\" /><br />";
-echo "<input  type=\"submit\" value=\"Submit\" />";//<div class=\"btn_submit\"><input  type=\"submit\" value=\"Submit\" /></div>";
+echo "<div class=\"btn_submit\"><input type=\"submit\" value=\"Submit\" onclick=\"sendForm('".$method_action->method_action."')\" /></div>";
 echo "</form>";    
 echo "</div>";       
 if($params) mysql_free_result($params);
