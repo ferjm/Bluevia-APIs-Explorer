@@ -3,14 +3,10 @@
 
  	 loadApiList();
 	 initListElements();
-  /*    $('#sms_form').submit(function(event) {
-        event.preventDefault();
-        var url =$(this).attr('action');
-        var datos = $(this).serialize();
-        $.get(url,datos,function(result) {
-            $('#result_div').html(result);
-        });
-    });*/
+		 
+     $('#apiForm').ajaxForm(function() { 
+         alert("Ratatatata!"); 
+     }); 
  });
  
  

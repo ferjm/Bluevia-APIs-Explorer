@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Bluevia API Explorer - Flossome</title>
-<script language="JavaScript" type="text/javascript" src="js/jquery-1.5.1.js"></script>
-<script language="JavaScript" type="text/javascript" src="js/index.js"></script>
-<script language="JavaScript" type="text/javascript" src="js/jquery_accordion.js"></script>
+<script  type="text/javascript" src="js/jquery-1.5.1.js"></script>
+<script  type="text/javascript" src="js/index.js"></script>
+<script  type="text/javascript" src="js/jquery.form.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -88,16 +88,5 @@
 </div> 
 
 <div id="footer"></div>
-
-<script type="text/javascript">
-    $('#API_form').submit(function(event) {
-        event.preventDefault();
-        var url = $(this).attr('action');
-        var datos = $(this).serialize();
-        $.get(url,datos,function(result) {
-            $('#result_div').html(result);
-        });
-    });
-</script>
 </body>
 </html>
