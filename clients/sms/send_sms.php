@@ -15,10 +15,11 @@ $application_context = array(
 $unica = new Unica($application_context);
 $sms = $unica->getApiSms();
 
-$number ="212345";//$_GET['sms_address']; 
-$sms_message = "SANDdroid dsa";//$_GET['sms_message'];
+$number =$_GET['address']; 
+$sms_message = $_GET['message'];
 $sms->setRecipient($number)
-    ->setMessage(SMS_SPECIAL_KEYWORD . $sms_message);
+    ->setFrom(TOKEN)
+    ->setMessage(SMS_SPECIAL_KEYWORD .' '. $sms_message);
 
 try {   
     $id = $sms->send();    
